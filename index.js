@@ -13,6 +13,7 @@ mongoose.connect(keys.mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
+mongoose.connect(keys.mongoURI, () => console.log("connected to database"));
 
 require("./routes/bookRoutes")(app);
 
